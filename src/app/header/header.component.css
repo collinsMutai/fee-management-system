@@ -1,0 +1,21 @@
+.container{
+    background-color: coral;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.container a{
+    color: #fff;
+    text-decoration: none;
+}
+.navlinks, .login{
+    display: flex;
+    gap: 30px;
+}
+.active{
+    color: red;
+}

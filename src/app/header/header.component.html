@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="logo">
+        <a >Logo</a>
+    </div>
+    <div class="navlinks">
+        <a routerLink="" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}">Welcome to The Jitu School</a>
+        <a routerLink="student" routerLinkActive="active" *ngIf="authService.isLoggedin">TheJitu School</a>
+    </div>
+    <div class="login">
+        <a routerLink="login" routerLinkActive="active"  *ngIf="!authService.isLoggedin">Login</a>
+        <a (click)="onLogout()" *ngIf="authService.isLoggedin">Logout</a>
+    </div>
+</div>
+<router-outlet></router-outlet>
