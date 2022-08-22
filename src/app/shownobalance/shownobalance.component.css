@@ -1,0 +1,15 @@
+.students{
+    border: 1px solid #000;
+    padding: 50px;
+    width: 300px;
+    background-color: coral;
+    color: #fff;
+}
+.card{
+    border-radius: 5px;
+    background-color: white;
+    color: coral;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+}

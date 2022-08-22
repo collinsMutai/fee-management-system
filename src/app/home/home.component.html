@@ -1,13 +1,11 @@
 <div class="container">
   <div class="image">
-    <img src="assets/images/hotel-cooking.jpg" alt="" />
+    <img src="assets/images/hotel-cooking.jpg" alt=""/>
   </div>
   <div class="text">
-    <h1>Lorem heading</h1>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-      explicabo! Ratione ut quae libero iusto facere nam pariatur doloribus
-      cupiditate?
+    <h1>{{title | uppercase}}</h1>
+    <p grey>
+      {{description | shorten:40}}
     </p>
   </div>
 </div>

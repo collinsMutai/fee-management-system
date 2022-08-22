@@ -34,9 +34,9 @@ export class StudentsService {
     return this.students
   }
   getBalance(){
-    return this.students
+    return this.students.filter(item=>item.balance>0)
   }
   getNoBalance(){
-    return this.students
+    return this.students.filter(item=>item.balance ===0)
   }
 }

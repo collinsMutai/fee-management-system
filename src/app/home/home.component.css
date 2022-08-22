@@ -4,3 +4,6 @@
     max-width: 750px;
     margin: 50px;
 }
+img:hover{
+    transform: scale(1.2);
+}

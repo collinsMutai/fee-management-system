@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './appRoutingModule';
 import { ShowbalanceComponent } from './showbalance/showbalance.component';
 import { ShownobalanceComponent } from './shownobalance/shownobalance.component';
+import { ShowAllComponent } from './show-all/show-all.component';
+import { ShortenPipe } from './Pipes/Shorten';
+import { StyleDirective } from './Directives/StyleDirective';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ShownobalanceComponent } from './shownobalance/shownobalance.component'
     StudentsComponent,
     NotfoundComponent,
     ShowbalanceComponent,
-    ShownobalanceComponent
+    ShownobalanceComponent,
+    ShowAllComponent,
+    ShortenPipe,
+    StyleDirective
   ],
   imports: [
     BrowserModule,

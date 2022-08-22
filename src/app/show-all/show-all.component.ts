@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Student } from '../interface/studentsinterface';
 import { StudentsService } from '../Services/students.service';
+
 @Component({
-  selector: 'app-showbalance',
-  templateUrl: './showbalance.component.html',
-  styleUrls: ['./showbalance.component.css'],
+  selector: 'app-show-all',
+  templateUrl: './show-all.component.html',
+  styleUrls: ['./show-all.component.css'],
 })
-export class ShowbalanceComponent implements OnInit {
+export class ShowAllComponent implements OnInit {
   students!: Student[];
   name = '';
   balance = 0;
@@ -20,7 +21,7 @@ export class ShowbalanceComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((value: Params) => {
-      this.students = this.studentsService.getBalance();
+      this.students = this.studentsService.getStudent();
     });
   }
 }

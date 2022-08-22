@@ -1,27 +1,32 @@
-
 <div class="container">
-    <div class="buttons" >
-        <div class="showBtns"
-        [routerLink]="['/student']"
-        >
-            <a>Show all students</a>
-        </div>
-        <div class="showBtns">
-            <a [routerLink]="['balance']">Students with balance</a>
-        </div>
-        <div class="showBtns">
-            <a [routerLink]="['/shownobalance']">Student w/o balance</a>
-        </div>
-      
+  <div class="buttons">
+    <div class="showBtns" >
+      <a (click)="showAll()">Show all students</a>
     </div>
-    <div class="students" *ngIf="students.length;">
-      <div class="card"   *ngFor="let student of students">
-        <p><strong>{{student.name}} </strong> <br>Balance: {{student.balance}}</p>
-        <div *ngIf="student.balance !==0">
-            <router-outlet></router-outlet>
-        </div>
+    <div class="showBtns">
+      <a (click)="showBalance()">Students with balance</a>
     </div>
-   
+    <div class="showBtns">
+      <a (click)="shownoBalance()">Student w/o balance</a>
     </div>
-   
+  </div>
+  
+
+  <!-- <div class="students" *ngIf="students.length">
+
+    <div class="card" *ngFor="let student of students">
+        
+      <p>
+        <strong>{{ student.name }} </strong> <br />Balance:
+        {{ student.balance }}
+        
+      </p>
+     
+    </div>
+  
+  </div> -->
+  <div ><router-outlet></router-outlet></div>
+  
+
 </div>
+

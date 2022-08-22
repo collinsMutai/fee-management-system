@@ -22,7 +22,13 @@ export class StudentsComponent implements OnInit {
     })
     
   }
-  displayStudent(){
-    this.router.navigate(['student'])
+  showAll(){
+    this.router.navigate(['student/all'])
+  }
+  showBalance(){
+    this.router.navigate(['student/balance'])
+  }
+  shownoBalance(){
+    this.router.navigate(['student/nobalance'])
   }
 }
