@@ -31,4 +31,7 @@ export class StudentsComponent implements OnInit {
   shownoBalance(){
     this.router.navigate(['student/nobalance'])
   }
+  addStudent(){
+    this.router.navigate(['student/addstudent'])
+  }
 }

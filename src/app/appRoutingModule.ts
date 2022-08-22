@@ -13,6 +13,7 @@ import { ShowbalanceComponent } from './showbalance/showbalance.component';
 import { ShownobalanceComponent } from './shownobalance/shownobalance.component';
 import { StudentResolverServiceService } from './Services/student-resolver.service.service';
 import { ShowAllComponent } from './show-all/show-all.component';
+import { AddStudentComponent } from './add-student/add-student.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
             { path: '', component: ShowAllComponent },
             { path: 'all', component: ShowAllComponent },
             { path: 'balance', component: ShowbalanceComponent },
-            { path: 'nobalance', component: ShownobalanceComponent }
+            { path: 'nobalance', component: ShownobalanceComponent },
+            {path: 'addstudent', component: AddStudentComponent}
         ]
     },
     { path: 'notfound', component: NotfoundComponent },

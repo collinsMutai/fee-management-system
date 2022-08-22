@@ -1,0 +1,17 @@
+<div class="form">
+
+    <div class="card">
+        <h1>Add Student Balance</h1>
+      
+            <label for="">Name</label>
+            <input type="text" [(ngModel)]="student.name"/>
+            <label for="">Balance</label>
+            <input type="number" [(ngModel)]="student.balance"/>
+            <button 
+            (click)="OnAdd()"
+            [ngStyle]="{backgroundColor:'coral'}"
+            >Add</button>
+     
+    </div>
+   
+</div>

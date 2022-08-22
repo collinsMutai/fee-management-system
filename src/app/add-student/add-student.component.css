@@ -1,0 +1,31 @@
+.form{
+    display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 30px;
+   border: 1px solid #000;
+   width: 300px;
+   min-height: 500px;
+   background-color: coral;
+   color: #000;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    color: coral;
+    padding: 10px;
+    margin: 15px;
+    outline: none;
+}
+.card input{
+    width: 300px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+.card button{
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}

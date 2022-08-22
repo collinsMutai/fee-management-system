@@ -39,4 +39,7 @@ export class StudentsService {
   getNoBalance(){
     return this.students.filter(item=>item.balance ===0)
   }
+  addStudent(newStudent:Student){
+    return this.students.push(newStudent)
+  }
 }

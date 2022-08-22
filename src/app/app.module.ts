@@ -14,6 +14,7 @@ import { ShownobalanceComponent } from './shownobalance/shownobalance.component'
 import { ShowAllComponent } from './show-all/show-all.component';
 import { ShortenPipe } from './Pipes/Shorten';
 import { StyleDirective } from './Directives/StyleDirective';
+import { AddStudentComponent } from './add-student/add-student.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { StyleDirective } from './Directives/StyleDirective';
     ShownobalanceComponent,
     ShowAllComponent,
     ShortenPipe,
-    StyleDirective
+    StyleDirective,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,
