@@ -14,22 +14,25 @@ import { ShownobalanceComponent } from './shownobalance/shownobalance.component'
 import { StudentResolverServiceService } from './Services/student-resolver.service.service';
 import { ShowAllComponent } from './show-all/show-all.component';
 
-const appRoutes:Routes =[
-    {path:'', component:HomeComponent},
-    {path:'login', component:LoginComponent},
-    {path:'student',component:StudentsComponent,  resolve:{students:StudentResolverServiceService}, canActivateChild:[AuthGuardService], children:[
-        {path:'all', component:ShowAllComponent},
-        {path: 'balance', component: ShowbalanceComponent},
-        {path: 'nobalance', component:ShownobalanceComponent}
-    ]},
-    {path:'notfound', component:NotfoundComponent},
-    {path:'**', redirectTo:'/notfound'}
+const appRoutes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
+    {
+        path: 'student', component: StudentsComponent, resolve: { students: StudentResolverServiceService }, canActivateChild: [AuthGuardService], children: [
+            { path: '', component: ShowAllComponent },
+            { path: 'all', component: ShowAllComponent },
+            { path: 'balance', component: ShowbalanceComponent },
+            { path: 'nobalance', component: ShownobalanceComponent }
+        ]
+    },
+    { path: 'notfound', component: NotfoundComponent },
+    { path: '**', redirectTo: '/notfound' }
 ]
 
 @NgModule({
-    imports:[RouterModule.forRoot(appRoutes)],
-    exports:[RouterModule]
+    imports: [RouterModule.forRoot(appRoutes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule{
+export class AppRoutingModule {
 
 }

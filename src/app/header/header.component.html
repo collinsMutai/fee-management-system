@@ -26,6 +26,7 @@
       }"
       routerLink=""
       routerLinkActive="active"
+      *ngIf="!authService.isLoggedin"
       [routerLinkActiveOptions]="{ exact: true }"
       >Welcome to The Jitu School</a
     >
@@ -38,6 +39,16 @@
       routerLinkActive="active"
       *ngIf="authService.isLoggedin"
       >TheJitu School</a
+    >
+    <a
+      [ngStyle]="{
+        color: '#fff',
+        textDecoration: 'none'
+      }"
+      routerLink="student"
+      routerLinkActive="active"
+      *ngIf="authService.isLoggedin"
+      >Students</a
     >
   </div>
   <div

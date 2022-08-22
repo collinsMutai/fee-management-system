@@ -1,4 +1,10 @@
 .form{
+    display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 30px;
+}
+img{
     width: 450px;
     height: 300px;
 }
