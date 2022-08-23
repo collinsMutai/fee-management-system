@@ -16,6 +16,9 @@ import { ShortenPipe } from './Pipes/Shorten';
 import { StyleDirective } from './Directives/StyleDirective';
 import { AddStudentComponent } from './add-student/add-student.component';
 
+import { StudentWithBalancePipe } from './Pipes/student-with-balance.pipe';
+import { StudentWithNoBalancePipe } from './Pipes/student-with-no-balance.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,9 @@ import { AddStudentComponent } from './add-student/add-student.component';
     ShowAllComponent,
     ShortenPipe,
     StyleDirective,
-    AddStudentComponent
+    AddStudentComponent,
+    StudentWithBalancePipe,
+    StudentWithNoBalancePipe
   ],
   imports: [
     BrowserModule,

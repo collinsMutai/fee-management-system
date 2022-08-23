@@ -2,13 +2,14 @@
 
     <div>
         <h1>Login Here</h1>
-        <form action="">
+        <p *ngIf=valid [ngStyle]="{color:'red'}">Invalid Credentials</p>
+        <div id="form" action="">
             <label for="">Email</label>
-            <input type="email">
+            <input type="email" [(ngModel)]="inputs.email">
             <label for="">Password</label>
-            <input type="password">
-            <button (click)="onClick()" *ngIf="!authService.isLoggedin">Login</button>
-        </form>
+            <input type="password" [(ngModel)]="inputs.pass">
+            <button (click)="onClick()">Login</button>
+        </div>
     </div>
     <div class="image">
         <img src="assets/images/login.jpg" alt=""/>

@@ -1,29 +1,30 @@
 <div
-  [ngStyle]="{
-    backgroundColor: 'coral',
-    color: '#fff',
-    display: 'flex',
-    justifyContent: 'space-between',
-    padding: '40px',
-    fontSize: '18px',
-    fontWeight: '700',
-    textTransform: 'capitalize'
-  }"
+  grey
+  [backgroundColor]="'coral'"
+  grey
+  [textTransform]="'capitalize'"
+  grey
+  [color]="'white'"
+  grey
+  [display]="'flex'"
+  grey
+  [justifyContent]="'space-between'"
+  grey
+  [padding]="'40px'"
+  grey
+  [fontSize]="'18px'"
+  grey
+  [fontWeight]="'700'"
 >
   <div class="logo">
     <a>Logo</a>
   </div>
-  <div
-    [ngStyle]="{
-      display: 'flex',
-      gap: '30px'
-    }"
-  >
+  <div grey [display]="'flex'" grey [gap]="'30px'">
     <a
-      [ngStyle]="{
-        color: '#fff',
-        textDecoration: 'none'
-      }"
+      grey
+      [color]="'white'"
+      grey
+      [textDecoration]="'none'"
       routerLink=""
       routerLinkActive="active"
       *ngIf="!authService.isLoggedin"
@@ -31,47 +32,42 @@
       >Welcome to The Jitu School</a
     >
     <a
-      [ngStyle]="{
-        color: '#fff',
-        textDecoration: 'none'
-      }"
+      grey
+      [color]="'white'"
+      grey
+      [textDecoration]="'none'"
       routerLink="student"
       routerLinkActive="active"
       *ngIf="authService.isLoggedin"
       >TheJitu School</a
     >
     <a
-      [ngStyle]="{
-        color: '#fff',
-        textDecoration: 'none'
-      }"
+      grey
+      [color]="'white'"
+      grey
+      [textDecoration]="'none'"
       routerLink="student"
       routerLinkActive="active"
       *ngIf="authService.isLoggedin"
       >Students</a
     >
   </div>
-  <div
-    [ngStyle]="{
-      display: 'flex',
-      gap: '30px'
-    }"
-  >
+  <div grey [display]="'flex'" grey [gap]="'30px'">
     <a
-      [ngStyle]="{
-        color: '#fff',
-        textDecoration: 'none'
-      }"
+      grey
+      [color]="'white'"
+      grey
+      [textDecoration]="'none'"
       routerLink="login"
       routerLinkActive="active"
       *ngIf="!authService.isLoggedin"
       >Login</a
     >
     <a
-      [ngStyle]="{
-        color: '#fff',
-        textDecoration: 'none'
-      }"
+      grey
+      [color]="'white'"
+      grey
+      [textDecoration]="'none'"
       (click)="onLogout()"
       *ngIf="authService.isLoggedin"
       >Logout</a

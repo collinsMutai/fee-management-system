@@ -8,30 +8,28 @@ import { Student } from '../interface/studentsinterface';
   styleUrls: ['./students.component.css'],
 })
 export class StudentsComponent implements OnInit {
+  students!: Student[];
+  name = '';
+  balance = 0;
+  hasBalance = true;
 
-  students!: Student[]
-    name=''
-    balance= 0
-    hasBalance= true
-  
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.data.subscribe((data:Data)=>{
-      this.students=data['students']
-    })
-    
+    this.route.data.subscribe((data: Data) => {
+      this.students = data['students'];
+    });
   }
-  showAll(){
-    this.router.navigate(['student/all'])
+  showAll() {
+    this.router.navigate(['student/all']);
   }
-  showBalance(){
-    this.router.navigate(['student/balance'])
+  showBalance() {
+    this.router.navigate(['student/balance']);
   }
-  shownoBalance(){
-    this.router.navigate(['student/nobalance'])
+  shownoBalance() {
+    this.router.navigate(['student/nobalance']);
   }
-  addStudent(){
-    this.router.navigate(['student/addstudent'])
+  addStudent() {
+    this.router.navigate(['student/addstudent']);
   }
 }

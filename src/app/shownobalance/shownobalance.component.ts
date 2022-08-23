@@ -6,20 +6,23 @@ import { StudentsService } from '../Services/students.service';
 @Component({
   selector: 'app-shownobalance',
   templateUrl: './shownobalance.component.html',
-  styleUrls: ['./shownobalance.component.css']
+  styleUrls: ['./shownobalance.component.css'],
 })
 export class ShownobalanceComponent implements OnInit {
+  students!: Student[];
 
-  students!: Student[]
-  name = ''
-  balance = 0
-  hasBalance = true
-  constructor(private route: ActivatedRoute,
-    private studentsService: StudentsService, private router: Router) { }
-
+  constructor(
+    private route: ActivatedRoute,
+    private studentsService: StudentsService,
+    private router: Router
+  ) {}
+  totalfee: number = this.studentsService.fee;
   ngOnInit(): void {
     this.route.params.subscribe((value: Params) => {
-      this.students = this.studentsService.getNoBalance()
-    })
+      this.students = this.studentsService.students;
+    });
+  }
+  getBalance(x: number) {
+    return this.studentsService.getBalance(x);
   }
 }

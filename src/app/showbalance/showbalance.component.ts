@@ -9,18 +9,25 @@ import { StudentsService } from '../Services/students.service';
 })
 export class ShowbalanceComponent implements OnInit {
   students!: Student[];
-  name = '';
-  balance = 0;
-  hasBalance = true;
+  // name = '';
+  // balance = 0;
+  // hasBalance = true;
+ x:number=0
   constructor(
     private route: ActivatedRoute,
     private studentsService: StudentsService,
     private router: Router
   ) {}
 
+  totalfees=this.studentsService.fee
   ngOnInit(): void {
     this.route.params.subscribe((value: Params) => {
-      this.students = this.studentsService.getBalance();
+      this.students = this.studentsService.students
     });
   }
+  getBalance(x:number){
+    // console.log(x);
+    
+    return this.studentsService.getBalance(x)
+}
 }

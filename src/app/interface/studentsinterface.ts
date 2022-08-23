@@ -2,6 +2,7 @@
 export interface Student{
     name:string,
     balance:number,
-    hasBalance:boolean
+    hasBalance:boolean,
+    amountPaid:number
 
 }

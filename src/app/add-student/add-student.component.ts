@@ -12,7 +12,8 @@ export class AddStudentComponent implements OnInit {
 student:Student={
   name:'',
   balance:0,
-  hasBalance:true
+  hasBalance:true,
+  amountPaid:0
 }
   constructor(private StudentsService:StudentsService, private router:Router) { }
 
@@ -23,7 +24,8 @@ student:Student={
     this.student={
       name:'',
       balance:0,
-      hasBalance:true
+      hasBalance:true,
+      amountPaid:0
     }
     this.router.navigate(['student'])
   }
